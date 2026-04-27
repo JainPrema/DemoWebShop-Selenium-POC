@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="DemoWebSho Suite" parallel="false">
+   <parameter name="browser" value="chrome"/>
+	<listeners>
+		<listener class-name = "listeners.TestListener"/>
+		 <listener class-name="listeners.SuiteListener"/>
+	</listeners>
+	
+  <!-- Smoke test -->
+  <test name="Smoke Tests">
+  	<groups>
+  		<run>
+  			<include name ="smoke"/>
+  		</run>
+  	</groups>
+    <classes>
+     	 <class name="tests.EndToEndTest"/>
+    </classes>
+  </test> 
+
+  <!-- Sanity test -->
+  <test name="Sanity Tests">
+    <groups>
+      <run>
+          <include name="sanity"/>
+      </run>
+    </groups>
+    <classes>
+       <class name="tests.EndToEndTest"/>
+    </classes>
+   </test>
+   
+   <!-- regression test -->
+   <test name="Regression Tests">
+    <groups>
+      <run>
+          <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+       <class name="tests.EndToEndTest"/>
+       
+    </classes>
+   </test>
+   
+   <test name="Negative Tests">
+    <groups>
+      <run>
+          <include name="negative"/>
+      </run>
+    </groups>
+    <classes>
+       <class name="tests.EndToEndTest"/>
+       
+    </classes>
+   </test>
+   
+   
+</suite> <!-- Suite -->
