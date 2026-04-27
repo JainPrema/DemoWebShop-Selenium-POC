@@ -1,7 +1,5 @@
 package listeners;
 
-import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -11,8 +9,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 import base.BaseTest;
-import utility.ConfigReader;
-import utility.EmailUtil;
 import utility.ExtentManager;
 import utility.ScreenshotUtil;
 
@@ -58,18 +54,6 @@ public class TestListener implements ITestListener{
 	public void onFinish(ITestContext context) {
 		extent.flush();
 
-		String reportPath = System.getProperty("user.dir") + "\\reports\\ExtentReport.html";
-
-		String subject = "Automation Execution Report";
-		// String body = "Hi team, \n\n Please find attached execution
-		// report.\n\nThanks";
-		String body = "Hi Team,\n\nExecution completed.Please find attached execution report.\n\nView report:\nhttps://seleniumpoc.netlify.app/extentreport";
-
-		try {
-			EmailUtil.sendMail(ConfigReader.getProperty("email.to"), subject, body, reportPath);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 
 }

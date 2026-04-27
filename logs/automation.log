@@ -859,3 +859,83 @@
 [2026-04-27 15:17:52] [main] INFO  utility.LoggingUtil - Browser closed
 [2026-04-27 15:17:58] [main] INFO  utility.LoggingUtil - Browser launched
 [2026-04-27 15:18:03] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:26:45] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:26:45] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 15:27:19] [main] INFO  utility.LoggingUtil - End to End test executed successfully
+[2026-04-27 15:27:19] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:27:27] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:27:27] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 15:27:30] [main] INFO  utility.LoggingUtil - Validating invalid login scenario
+[2026-04-27 15:27:30] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:27:37] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:27:47] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:27:55] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:28:11] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:29:33] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:29:33] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 15:30:01] [main] INFO  utility.LoggingUtil - End to End test executed successfully
+[2026-04-27 15:30:01] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:30:06] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:30:06] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 15:30:07] [main] INFO  utility.LoggingUtil - Validating invalid login scenario
+[2026-04-27 15:30:08] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:30:13] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:30:18] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:30:30] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:30:37] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:30:49] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:30:49] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 15:31:13] [main] INFO  utility.LoggingUtil - End to End test executed successfully
+[2026-04-27 15:31:13] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:31:25] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:31:25] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 15:31:26] [main] INFO  utility.LoggingUtil - Validating invalid login scenario
+[2026-04-27 15:31:27] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:37:00] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:37:56] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:38:12] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:38:21] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:38:35] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:38:35] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 15:39:03] [main] INFO  utility.LoggingUtil - End to End test executed successfully
+[2026-04-27 15:39:03] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:39:12] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:39:12] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 15:39:19] [main] INFO  utility.LoggingUtil - Validating invalid login scenario
+[2026-04-27 15:39:19] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 15:48:00] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 15:48:11] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:02:42] [TestNG-tests-1] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:02:42] [TestNG-tests-1] INFO  utility.LoggingUtil - Executing iframe test and alert test
+[2026-04-27 16:02:59] [TestNG-tests-2] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:03:10] [TestNG-tests-1] INFO  utility.LoggingUtil - iframe and alert action execution completed successfully
+[2026-04-27 16:03:11] [TestNG-tests-1] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:03:13] [TestNG-tests-2] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:08:21] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:08:32] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:08:48] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:08:59] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:09:12] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:09:12] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 16:09:43] [main] INFO  utility.LoggingUtil - End to End test executed successfully
+[2026-04-27 16:09:44] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:09:51] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:09:51] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 16:09:54] [main] INFO  utility.LoggingUtil - Validating invalid login scenario
+[2026-04-27 16:09:54] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:10:09] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:10:22] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:39:43] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:39:52] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:40:02] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:40:13] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:40:26] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:40:26] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 16:41:06] [main] INFO  utility.LoggingUtil - End to End test executed successfully
+[2026-04-27 16:41:06] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:41:14] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:41:14] [main] INFO  utility.LoggingUtil - Executing End to End test with data provider
+[2026-04-27 16:41:16] [main] INFO  utility.LoggingUtil - Validating invalid login scenario
+[2026-04-27 16:41:17] [main] INFO  utility.LoggingUtil - Browser closed
+[2026-04-27 16:41:23] [main] INFO  utility.LoggingUtil - Browser launched
+[2026-04-27 16:41:37] [main] INFO  utility.LoggingUtil - Browser closed

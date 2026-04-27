@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [DemoWebSho Suite]">
+<suite name="Failed suite [DemoWebSho Suite]">
+  <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="listeners.TestListener"/>
+    <listener class-name="listeners.SuiteListener"/>
   </listeners>
-  <test thread-count="2" parallel="tests" name="end to end test(failed)">
+  <test thread-count="5" name="Negative Tests(failed)">
+    <groups>
+      <run>
+        <include name="negative"/>
+      </run>
+    </groups>
     <classes>
       <class name="tests.EndToEndTest">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="completeOrder"/>
+          <include name="loginFailureDemoTest"/>
         </methods>
       </class> <!-- tests.EndToEndTest -->
     </classes>
-  </test> <!-- end to end test(failed) -->
-  <test thread-count="2" parallel="tests" name="validation test(failed)">
-    <classes>
-      <class name="tests.WindowAlertTest">
-        <methods>
-          <include name="setup"/>
-          <include name="windowActions"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- tests.WindowAlertTest -->
-    </classes>
-  </test> <!-- validation test(failed) -->
+  </test> <!-- Negative Tests(failed) -->
 </suite> <!-- Failed suite [DemoWebSho Suite] -->

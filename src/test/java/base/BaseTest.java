@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utility.ConfigReader;
@@ -19,9 +20,9 @@ public class BaseTest {
 	}
 	
 	
-	//@Parameters("browser")
+	@Parameters("browser")
 	@BeforeMethod(alwaysRun = true)
-	public void setup() {
+	public void setup(String browser) {
 		ChromeOptions options = new ChromeOptions();
 
 	    options.addArguments("--headless=new");
@@ -29,7 +30,7 @@ public class BaseTest {
 	    options.addArguments("--disable-dev-shm-usage");
 	    options.addArguments("--window-size=1920,1080");
 	    
-		String browser = ConfigReader.getProperty("browser");
+		//String browser = ConfigReader.getProperty("browser");
 		if(browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver.set(new ChromeDriver());

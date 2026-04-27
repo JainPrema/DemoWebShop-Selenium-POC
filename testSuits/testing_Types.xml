@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <suite name="DemoWebSho Suite" parallel="false">
-
+   <parameter name="browser" value="chrome"/>
 	<listeners>
 		<listener class-name = "listeners.TestListener"/>
+		 <listener class-name="listeners.SuiteListener"/>
 	</listeners>
 	
   <!-- Smoke test -->
@@ -14,7 +15,7 @@
   		</run>
   	</groups>
     <classes>
-     	 <class name="tests.WindowAlertTest"/>
+     	 <class name="tests.EndToEndTest"/>
     </classes>
   </test> 
 
@@ -26,7 +27,7 @@
       </run>
     </groups>
     <classes>
-       <class name="tests.AgreeCheckboxValidationTest"/>
+       <class name="tests.EndToEndTest"/>
     </classes>
    </test>
    
@@ -39,9 +40,21 @@
     </groups>
     <classes>
        <class name="tests.EndToEndTest"/>
-       <class name="tests.AddItemsToCartWithoutLogin"/>
        
     </classes>
    </test>
+   
+   <test name="Negative Tests">
+    <groups>
+      <run>
+          <include name="negative"/>
+      </run>
+    </groups>
+    <classes>
+       <class name="tests.EndToEndTest"/>
+       
+    </classes>
+   </test>
+   
    
 </suite> <!-- Suite -->

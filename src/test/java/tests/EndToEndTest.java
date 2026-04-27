@@ -23,7 +23,7 @@ import utility.LoggingUtil;
 
 public class EndToEndTest extends BaseTest {
 
-	@Test(dataProvider = "loginData", dataProviderClass = DataReader.class, groups = "regression")
+	@Test(dataProvider = "loginData", dataProviderClass = DataReader.class, groups = "regression", priority = 1)
 	public void completeOrder(String user, String passwd, boolean expectedSuccess) throws IOException {
 
 		LoggingUtil.info("Executing End to End test with data provider");
@@ -83,7 +83,7 @@ public class EndToEndTest extends BaseTest {
 	}
 	
 	
-	@Test(groups = "sanity")
+	@Test(groups = "sanity", priority = 2)
 	public void registerAndLoginTest() {
 		String gender = ConfigReader.getProperty("regGender");
 		String Fname = ConfigReader.getProperty("regFirstName");
@@ -106,7 +106,14 @@ public class EndToEndTest extends BaseTest {
 		
 	}
 	
-	@Test(dependsOnMethods = "completeOrder", retryAnalyzer = RetryAnalyzer.class, groups = "smoke")
+	@Test(groups = "negative", priority = 3)
+	public void loginFailureDemoTest() {
+	    LoginPage login = new LoginPage(getDriver());
+	    HomePage home = login.LoginCheck("wronguser@mail.com", "anu@123");
+	    Assert.assertTrue(home.isUserLoggedIn(), "Login Failed");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, groups = "smoke", priority = 4)
 	public void openMultipleWindows() {
 		HomePage home = new HomePage(getDriver());
 		home.openFooterLinks();

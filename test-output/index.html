@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-DemoWebSho_Suite" class="navigator-link">
-              <span class="suite-name border-passed">DemoWebSho Suite</span>
+              <span class="suite-name border-failed">DemoWebSho Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,17 +50,17 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-DemoWebSho_Suite" class="navigator-link ">
-                    <span>C:\Users\premjain\eclipse-workspace\demoWebShop\testSuits\testng3_allTests.xml</span>
+                    <span>C:\Users\premjain\eclipse-workspace\demoWebShop\testSuits\testing_Types.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-DemoWebSho_Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="group-DemoWebSho_Suite" class="navigator-link ">
-                    <span>3 groups</span>
+                    <span>4 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-DemoWebSho_Suite" class="hide-methods failed suite-DemoWebSho_Suite"> (hide)</a> <!-- hide-methods failed suite-DemoWebSho_Suite -->
+                      <a href="#" panel-name="suite-DemoWebSho_Suite" class="show-methods failed suite-DemoWebSho_Suite"> (show)</a> <!-- show-methods failed suite-DemoWebSho_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-DemoWebSho_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DemoWebSho_Suite" title="tests.EndToEndTest" class="method navigator-link" hash-for-method="loginFailureDemoTest">loginFailureDemoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-DemoWebSho_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -133,6 +147,58 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-DemoWebSho_Suite" class="panel DemoWebSho_Suite">
+          <div class="suite-DemoWebSho_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.EndToEndTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginFailureDemoTest">
+                  </a> <!-- loginFailureDemoTest -->
+                  <span class="method-name">loginFailureDemoTest</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.linkText: Log out&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utility.WaitUtil.waitForElement(WaitUtil.java:19)
+	at pages.HomePage.isUserLoggedIn(HomePage.java:76)
+	at tests.EndToEndTest.loginFailureDemoTest(EndToEndTest.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Log out&quot;}
+  (Session info: chrome=147.0.7727.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b26304261b9fb62666648082193b7e0e, findElement {value=Log out, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.103, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\premjain\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54777}, goog:processID: 18704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54777/devtoo..., se:cdpVersion: 147.0.7727.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b26304261b9fb62666648082193b7e0e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy30.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 29 more
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-DemoWebSho_Suite-class-failed -->
           <div class="suite-DemoWebSho_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -174,21 +240,58 @@
         </div> <!-- panel DemoWebSho_Suite -->
         <div panel-name="test-xml-DemoWebSho_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\premjain\eclipse-workspace\demoWebShop\testSuits\testng3_allTests.xml</span>
+            <span class="header-content">C:\Users\premjain\eclipse-workspace\demoWebShop\testSuits\testing_Types.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;DemoWebSho Suite&quot;&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;listeners.TestListener&quot;/&gt;
+    &lt;listener class-name=&quot;listeners.SuiteListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;all tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Smoke Tests&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;smoke&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.EndToEndTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- all tests --&gt;
+  &lt;/test&gt; &lt;!-- Smoke Tests --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Sanity Tests&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;sanity&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tests.EndToEndTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Sanity Tests --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Regression Tests&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;regression&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tests.EndToEndTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Regression Tests --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Negative Tests&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;negative&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tests.EndToEndTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Negative Tests --&gt;
 &lt;/suite&gt; &lt;!-- DemoWebSho Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -200,7 +303,16 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">all tests (1 class)</span>
+                <span class="test-name">Smoke Tests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Sanity Tests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Regression Tests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Negative Tests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -210,6 +322,14 @@
             <span class="header-content">Groups for DemoWebSho Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">negative</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginFailureDemoTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
             <div class="test-group">
               <span class="test-group-name">regression</span>
               <br/>
@@ -250,28 +370,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'completeOrder')
 data.setCell(0, 2, 'tests.EndToEndTest')
-data.setCell(0, 3, 26091);
+data.setCell(0, 3, 39860);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'registerAndLoginTest')
+data.setCell(1, 1, 'loginFailureDemoTest')
 data.setCell(1, 2, 'tests.EndToEndTest')
-data.setCell(1, 3, 6961);
+data.setCell(1, 3, 13199);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'openMultipleWindows')
+data.setCell(2, 1, 'registerAndLoginTest')
 data.setCell(2, 2, 'tests.EndToEndTest')
-data.setCell(2, 3, 4911);
+data.setCell(2, 3, 11479);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'completeOrder')
+data.setCell(3, 1, 'openMultipleWindows')
 data.setCell(3, 2, 'tests.EndToEndTest')
-data.setCell(3, 3, 1760);
+data.setCell(3, 3, 8664);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'completeOrder')
+data.setCell(4, 2, 'tests.EndToEndTest')
+data.setCell(4, 3, 2581);
 window.suiteTableData['DemoWebSho_Suite']= { tableData: data, tableDiv: 'times-div-DemoWebSho_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-DemoWebSho_Suite">
               </div> <!-- times-div-DemoWebSho_Suite -->
             </div> <!-- times-div -->
@@ -286,9 +410,38 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-DemoWebSho_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">12 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.EndToEndTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">openMultipleWindows</span>
+                <br/>
+                <span class="ignored-method-name">completeOrder</span>
+                <br/>
+                <span class="ignored-method-name">loginFailureDemoTest</span>
+                <br/>
+                <span class="ignored-method-name">registerAndLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">completeOrder</span>
+                <br/>
+                <span class="ignored-method-name">registerAndLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">loginFailureDemoTest</span>
+                <br/>
+                <span class="ignored-method-name">completeOrder</span>
+                <br/>
+                <span class="ignored-method-name">loginFailureDemoTest</span>
+                <br/>
+                <span class="ignored-method-name">openMultipleWindows</span>
+                <br/>
+                <span class="ignored-method-name">openMultipleWindows</span>
+                <br/>
+                <span class="ignored-method-name">registerAndLoginTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-DemoWebSho_Suite" class="panel">
@@ -299,52 +452,66 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">tests.EndToEndTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup</span>
+                <span class="method-name">setup(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">completeOrder(anu_s@gmail.com, anu@123, true)</span>
-                <span class="method-start">10856 ms</span>
+                <span class="method-name">openMultipleWindows</span>
+                <span class="method-start">15119 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">36959 ms</span>
+                <span class="method-start">23847 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">37170 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">completeOrder(wronguser@gmail.com, anu@123, false)</span>
-                <span class="method-start">45236 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">46996 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">47139 ms</span>
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">25273 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">registerAndLoginTest</span>
-                <span class="method-start">55139 ms</span>
+                <span class="method-start">33833 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">62101 ms</span>
+                <span class="method-start">45318 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">62270 ms</span>
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">45895 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">openMultipleWindows</span>
-                <span class="method-start">68217 ms</span>
+                <span class="method-name">completeOrder(anu_s@gmail.com, anu@123, true)</span>
+                <span class="method-start">57982 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">73130 ms</span>
+                <span class="method-start">97848 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">98286 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">completeOrder(wronguser@gmail.com, anu@123, false)</span>
+                <span class="method-start">105852 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">108433 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">109000 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginFailureDemoTest</span>
+                <span class="method-start">115705 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">129175 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

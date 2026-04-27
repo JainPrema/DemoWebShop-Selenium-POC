@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-   <suite name="CrossBrowser Suite" parallel="tests" thread-count="2">
+<suite name="DemoWebShop Suite" parallel="tests" thread-count="2">
 
 	<listeners>
 		<listener class-name = "listeners.TestListener"/>
 	</listeners>
 	
- 
 
     <test name = "chrome Test">
     <parameter name="browser" value="chrome"/>
     <classes>
-       <class name="tests.AddItemsToCartWithoutLogin"/>
+       <class name="tests.WindowAlertTest"/>
     </classes>
    </test>
    
    <test name = "Edge Test">
    <parameter name="browser" value="edge"/>
     <classes>
-       <class name="tests.EndToEndTest"/>
+       <class name="tests.FlakyTest"/>  
+       
     </classes>
    </test>
    
