@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="DemoWebSho Suite" parallel="false">
+
+	<listeners>
+		<listener class-name = "listeners.TestListener"/>
+	</listeners>
+	
+  <test name = "all tests">
+    <classes>        
+     	 <class name="tests.EndToEndTest"/>
+     	 
+    </classes>
+  </test> 
+
+  
+   
+</suite> <!-- Suite -->

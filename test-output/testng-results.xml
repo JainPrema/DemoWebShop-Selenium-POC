@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-27T15:16:50 IST" name="DemoWebSho Suite" finished-at="2026-04-27T15:18:03 IST" duration-ms="73399">
+    <groups>
+      <group name="regression">
+        <method signature="EndToEndTest.completeOrder(java.lang.String,java.lang.String,boolean)[pri:0, instance:tests.EndToEndTest@13526e59]" name="completeOrder" class="tests.EndToEndTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="EndToEndTest.openMultipleWindows()[pri:0, instance:tests.EndToEndTest@13526e59]" name="openMultipleWindows" class="tests.EndToEndTest"/>
+      </group> <!-- smoke -->
+      <group name="sanity">
+        <method signature="EndToEndTest.registerAndLoginTest()[pri:0, instance:tests.EndToEndTest@13526e59]" name="registerAndLoginTest" class="tests.EndToEndTest"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test started-at="2026-04-27T15:16:50 IST" name="all tests" finished-at="2026-04-27T15:18:03 IST" duration-ms="73399">
+      <class name="tests.EndToEndTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:16:50 IST" name="setup" finished-at="2026-04-27T15:17:01 IST" duration-ms="10856" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="completeOrder(java.lang.String,java.lang.String,boolean)[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:17:01 IST" name="completeOrder" data-provider="loginData" finished-at="2026-04-27T15:17:27 IST" duration-ms="26091" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[anu_s@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[anu@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completeOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:17:27 IST" name="tearDown" finished-at="2026-04-27T15:17:27 IST" duration-ms="210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:17:27 IST" name="setup" finished-at="2026-04-27T15:17:35 IST" duration-ms="8065" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="completeOrder(java.lang.String,java.lang.String,boolean)[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:17:35 IST" name="completeOrder" data-provider="loginData" finished-at="2026-04-27T15:17:37 IST" duration-ms="1760" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wronguser@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[anu@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completeOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:17:37 IST" name="tearDown" finished-at="2026-04-27T15:17:37 IST" duration-ms="141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:17:37 IST" name="setup" finished-at="2026-04-27T15:17:45 IST" duration-ms="7999" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="registerAndLoginTest()[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:17:45 IST" name="registerAndLoginTest" finished-at="2026-04-27T15:17:52 IST" duration-ms="6961" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerAndLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:17:52 IST" name="tearDown" finished-at="2026-04-27T15:17:52 IST" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:17:52 IST" name="setup" finished-at="2026-04-27T15:17:58 IST" duration-ms="5947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="openMultipleWindows()[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:17:58 IST" name="openMultipleWindows" finished-at="2026-04-27T15:18:03 IST" depends-on-methods="tests.EndToEndTest.completeOrder" duration-ms="4911" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMultipleWindows -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.EndToEndTest@13526e59]" started-at="2026-04-27T15:18:03 IST" name="tearDown" finished-at="2026-04-27T15:18:03 IST" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.EndToEndTest -->
+    </test> <!-- all tests -->
+  </suite> <!-- DemoWebSho Suite -->
+</testng-results>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="DemoWebShop Suite" parallel="tests" thread-count="2">
+
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+
+    <test name="AddToCart Test">
+        <classes>
+            <class name="tests.AddItemsToCartWithoutLogin"/>
+        </classes>
+    </test>
+
+    <test name="EtoE Test">
+        <classes>
+            <class name="tests.EndToEndTest"/>
+        </classes>
+    </test>
+
+</suite>

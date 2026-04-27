@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="DemoWebSho Suite" parallel="false">
+
+	<listeners>
+		<listener class-name = "listeners.TestListener"/>
+	</listeners>
+	
+  <!-- Smoke test -->
+  <test name="Smoke Tests">
+  	<groups>
+  		<run>
+  			<include name ="smoke"/>
+  		</run>
+  	</groups>
+    <classes>
+     	 <class name="tests.WindowAlertTest"/>
+    </classes>
+  </test> 
+
+  <!-- Sanity test -->
+  <test name="Sanity Tests">
+    <groups>
+      <run>
+          <include name="sanity"/>
+      </run>
+    </groups>
+    <classes>
+       <class name="tests.AgreeCheckboxValidationTest"/>
+    </classes>
+   </test>
+   
+   <!-- regression test -->
+   <test name="Regression Tests">
+    <groups>
+      <run>
+          <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+       <class name="tests.EndToEndTest"/>
+       <class name="tests.AddItemsToCartWithoutLogin"/>
+       
+    </classes>
+   </test>
+   
+</suite> <!-- Suite -->
