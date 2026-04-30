@@ -1,21 +1,22 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>demoWebShop</groupId>
-  <artifactId>demoWebShop</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<groupId>demoWebShop</groupId>
+	<artifactId>demoWebShop</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-  <name>demoWebShop</name>
-  <url>http://maven.apache.org</url>
+	<name>demoWebShop</name>
+	<url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
-  <dependencies>
-     <dependency>
+	<dependencies>
+		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.39.0</version>
@@ -28,7 +29,7 @@
 			<version>7.11.0</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -47,14 +48,14 @@
 			<artifactId>extentreports</artifactId>
 			<version>5.1.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
 			<version>2.25.3</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
@@ -68,5 +69,65 @@
 			<version>2.0.2</version>
 		</dependency>
 
-  </dependencies>
+
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.29.0</version>
+		</dependency>
+
+
+	</dependencies>
+	
+	
+	<profiles>
+
+		<!-- Sanity Profile -->
+		<profile>
+			<id>Sanity</id>
+			<properties>
+				<groups>sanity</groups>
+			</properties>
+		</profile>
+
+		<!-- Regression Profile -->
+		<profile>
+			<id>Regression</id>
+			<properties>
+				<groups>regression</groups>
+			</properties>
+		</profile>
+
+	</profiles>
+	<build>
+		<plugins>
+
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.4</version>
+
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>${project.basedir}/testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+
+					<argLine>
+						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar"
+					</argLine>
+				</configuration>
+
+				<dependencies>
+					<dependency>
+						<groupId>org.aspectj</groupId>
+						<artifactId>aspectjweaver</artifactId>
+						<version>1.9.22.1</version>
+					</dependency>
+				</dependencies>
+
+			</plugin>
+
+		</plugins>
+	</build>
+
+
 </project>
